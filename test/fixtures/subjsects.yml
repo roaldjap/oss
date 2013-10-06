@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  section_id: 
+  subject_id: 
+  room_id: 
+  schedule_id: 
+
+two:
+  section_id: 
+  subject_id: 
+  room_id: 
+  schedule_id: 

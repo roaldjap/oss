@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @chairperson.lname %>
+</p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @chairperson.fname %>
+</p>
+
+<p>
+  <strong>Mi:</strong>
+  <%= @chairperson.mi %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @chairperson.department %>
+</p>
+
+<%= link_to 'Edit', edit_chairperson_path(@chairperson) %> |
+<%= link_to 'Back', chairpeople_path %>

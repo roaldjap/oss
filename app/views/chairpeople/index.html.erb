@@ -1,0 +1,33 @@
+<h1>Listing chairpeople</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lname</th>
+      <th>Fname</th>
+      <th>Mi</th>
+      <th>Department</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chairpeople.each do |chairperson| %>
+      <tr>
+        <td><%= chairperson.lname %></td>
+        <td><%= chairperson.fname %></td>
+        <td><%= chairperson.mi %></td>
+        <td><%= chairperson.department %></td>
+        <td><%= link_to 'Show', chairperson %></td>
+        <td><%= link_to 'Edit', edit_chairperson_path(chairperson) %></td>
+        <td><%= link_to 'Destroy', chairperson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chairperson', new_chairperson_path %>

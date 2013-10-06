@@ -1,0 +1,32 @@
+<%= form_for(@subject) do |f| %>
+  <% if @subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+
+      <ul>
+      <% @subject.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<%= simple_form_for @subject do |f| %>
+  <%= f.input :name %>
+
+  <%= f.input :desc %>
+
+  <%= f.input :load %>
+
+    <%= f.input :department do %>
+    <%= f.select :department_id, Department.all.map{|u| [u.name, u.id]}, :include_blank => true  %>
+  <% end %>
+
+  <%= f.button :submit %>
+
+<% end %>
+
+
+  
+<% end %>

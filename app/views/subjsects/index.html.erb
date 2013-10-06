@@ -1,0 +1,33 @@
+<h1>Listing subjsects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Subject</th>
+      <th>Room</th>
+      <th>Schedule</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subjsects.each do |subjsect| %>
+      <tr>
+        <td><%= subjsect.section %></td>
+        <td><%= subjsect.subject %></td>
+        <td><%= subjsect.room %></td>
+        <td><%= subjsect.schedule %></td>
+        <td><%= link_to 'Show', subjsect %></td>
+        <td><%= link_to 'Edit', edit_subjsect_path(subjsect) %></td>
+        <td><%= link_to 'Destroy', subjsect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subjsect', new_subjsect_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@subjsect) do |f| %>
+  <% if @subjsect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subjsect.errors.count, "error") %> prohibited this subjsect from being saved:</h2>
+
+      <ul>
+      <% @subjsect.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<%= simple_form_for @subjsect do |f| %>
+  <%= f.association :section %>
+
+  <%= f.association :subject %>
+
+  <%= f.association :room %>
+
+    <%= f.input :schedule do %>
+    <%= f.select :schedule_id, Schedule.all.map{|u| [u.code, u.id]}, :include_blank => true  %>
+  <% end %>
+
+  <%= f.button :submit %>
+
+<% end %>
+
+
+
+  
+<% end %>

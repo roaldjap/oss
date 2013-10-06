@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @subjsect.section %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @subjsect.subject %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @subjsect.room %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @subjsect.schedule %>
+</p>
+
+<%= link_to 'Edit', edit_subjsect_path(@subjsect) %> |
+<%= link_to 'Back', subjsects_path %>

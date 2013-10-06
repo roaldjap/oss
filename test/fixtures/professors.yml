@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lname: MyString
+  fname: MyString
+  mi: MyString
+  status: MyString
+  load: 1
+  subjsect_id: 
+
+two:
+  lname: MyString
+  fname: MyString
+  mi: MyString
+  status: MyString
+  load: 1
+  subjsect_id: 

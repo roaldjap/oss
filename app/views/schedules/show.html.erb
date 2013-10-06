@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @schedule.day %>
+</p>
+
+<p>
+  <strong>Timeslot:</strong>
+  <%= @schedule.timeslot %>
+</p>
+
+<p>
+  <strong>Subjsect:</strong>
+  <%= @schedule.subjsect %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>
